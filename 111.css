@@ -1,0 +1,38 @@
+.left {
+    position: fixed;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 15%;
+    min-width:250px;
+    padding: 20px 10px 0 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    border-right: 1px solid #eee;
+}
+#unfold {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    font-size: 30px;
+    color: #337ab7;
+}
+#navNone {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    font-size: 30px;
+    color: #f00;
+}
+.right {
+    float: right;
+    width: 85%;
+}
+.panel-heading a{
+    display:block;
+}

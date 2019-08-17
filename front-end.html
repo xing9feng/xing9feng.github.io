@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>前端</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2 col-md-2">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Project name</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-10 col-md-10">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="operation.html">运营</a></li>
+                            <li><a href="product.html">产品</a></li>
+                            <li><a href="design.html">设计</a></li>
+                            <li class="active"><a href="front-end.html">前端</a></li>
+                            <li><a href="back-end.html">后端</a></li>
+                            <li><a href="tool.html">工具</a></li>
+                            <li><a href="study.html">充电</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">云上</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">游戏</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+                            <li class="active" id="b-change"><a href="javascript:;">换肤</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="skin-layer">
+        <div class="skin-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-10">
+                        <ul id="myTab" class="nav nav-pills">
+                            <li class="active"><a href="#home" data-toggle="tab">热门</a></li>
+                            <li><a href="#star" data-toggle="tab">明星</a></li>
+                            <li><a href="#cartoon" data-toggle="tab">卡通</a></li>
+                            <li><a href="#concise" data-toggle="tab">简约</a></li>
+                        </ul>
+
+                    </div>
+                    <!--<div class="col-sm-2 col-md-2">
+                       <div id='palette-white'><a href="javascript:;" title="白色"></a></div>
+                       <div id='palette-black'><a href="javascript:;" title="黑色"></a></div>
+                    </div>-->
+                    <div class="col-sm-4 col-md-2">
+                        <div id="skin-clear">
+                            <i class="glyphicon glyphicon-remove"></i>
+                            <a href="javascript:;">不使用皮肤</a>
+                        </div>
+                        <div id="skin-up">
+                            <i class="glyphicon glyphicon-arrow-up"></i>
+                            <a href="javascript:;">收起</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skin-photo-body">
+            <div class="container">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="home">
+                        <div class="skin-img"><img class="img-responsive" src="images/bg_jy_1.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_jy_2.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_1.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_2.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_3.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_mx_1.jpg" title="胡歌"></div>
+                        <div class="skin-img"><img src="images/bg_mx_2.jpg" title="刘诗诗"></div>
+                        <div class="skin-img"><img src="images/bg_mx_5.jpg" title="林心如"></div>
+                        <div class="skin-img"><img src="images/bg_mx_6.jpg" title="杨幂"></div>
+                        <div class="skin-img"><img src="images/bg_mx_7.jpg" title="杨幂"></div>
+                        <div class="skin-img"><img src="images/bg_mx_8.jpg" title="邓紫棋"></div>
+                        <div class="skin-img"><img src="images/bg_mx_10.jpg" title="邓紫棋"></div>
+                        <div class="skin-img"><img src="images/bg_mx_11.jpg" title="赵丽颖"></div>
+                        <div class="skin-img"><img src="images/bg_mx_13.jpg" title="柳岩"></div>
+                    </div>
+                    <div class="tab-pane fade" id="star">
+
+                        <div class="skin-img"><img src="images/bg_mx_1.jpg" title="胡歌"></div>
+                        <div class="skin-img"><img src="images/bg_mx_2.jpg" title="刘诗诗"></div>
+                        <div class="skin-img"><img src="images/bg_mx_3.jpg" title="林心如"></div>
+                        <div class="skin-img"><img src="images/bg_mx_4.jpg" title="林心如"></div>
+                        <div class="skin-img"><img src="images/bg_mx_5.jpg" title="林心如"></div>
+                        <div class="skin-img"><img src="images/bg_mx_6.jpg" title="杨幂"></div>
+                        <div class="skin-img"><img src="images/bg_mx_7.jpg" title="杨幂"></div>
+                        <div class="skin-img"><img src="images/bg_mx_8.jpg" title="邓紫棋"></div>
+                        <div class="skin-img"><img src="images/bg_mx_9.jpg" title="邓紫棋"></div>
+                        <div class="skin-img"><img src="images/bg_mx_10.jpg" title="邓紫棋"></div>
+                        <div class="skin-img"><img src="images/bg_mx_11.jpg" title="赵丽颖"></div>
+                        <div class="skin-img"><img src="images/bg_mx_12.jpg" title="柳岩"></div>
+                        <div class="skin-img"><img src="images/bg_mx_13.jpg" title="柳岩"></div>
+                    </div>
+                    <div class="tab-pane fade" id="cartoon">
+                        <div class="skin-img"><img src="images/bg_kt_1.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_2.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_3.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_4.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_5.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_kt_6.jpg" title="背景图"></div>
+                    </div>
+                    <div class="tab-pane fade" id="concise">
+                        <div class="skin-img"><img src="images/bg_jy_1.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_jy_2.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_jy_3.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_jy_4.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_jy_5.jpg" title="背景图"></div>
+                        <div class="skin-img"><img src="images/bg_jy_6.jpg" title="背景图"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#section-1">社区</a></li>
+                    <li><a href="#section-2">文档手册</a></li>
+                    <li><a href="#section-3">JS库</a></li>
+                    <li><a href="#section-4">js框架</a></li>
+                    <li><a href="#section-5">UI框架</a></li>
+                    <li><a href="#section-6">CSS库</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="#section-7">编辑器</a></li>
+                    <li><a href="#section-8">前端工具</a></li>
+                    <li><a href="#section-9">CDN</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="#section-10">酷站推荐</a></li>
+                    <li><a href="#section-11">前端团队</a></li>
+                    <li><a href="#section-12">前端牛人</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+
+                <div class="row">
+                    <ul id="section-1" class="col-md-12 tag-web">
+                        <h5 class="cate-title">社区</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/1839IA8fkMxv.png">
+                                </div>
+                                <span class="web-name name-bold">原型里写产品文档</span>
+                                <p>不错的文档编辑器，可以方便的对文字图片进行排版编辑。</p>
+                            </a>
+                           </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/1839IA8fkMxv.png">
+                                </div>
+                                <span class="web-name name-bold">原型里写产品文档</span>
+                                <p>不错的文档编辑器，可以方便的对文字图片进行排版编辑。</p>
+                            </a>
+                           </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/1407x3lDljGQ.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/1301SaF4boWm.png">
+                                </div>
+                                <span class="web-name name-bold">原型里写产品文档</span>
+                                <p>不错的文档编辑器，可以方便的对文字图片进行排版编辑。</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul id="section-2" class="col-md-12 tag-web">
+                        <h5 class="cate-title">文档手册</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-3" class="col-md-12 tag-web">
+                        <h5 class="cate-title">JS库</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-4" class="col-md-12 tag-web">
+                        <h5 class="cate-title">js框架</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-5" class="col-md-12 tag-web">
+                        <h5 class="cate-title">UI框架</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-6" class="col-md-12 tag-web">
+                        <h5 class="cate-title">CSS库</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-7" class="col-md-12 tag-web">
+                        <h5 class="cate-title">编辑器</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-8" class="col-md-12 tag-web">
+                        <h5 class="cate-title">前端工具</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-9" class="col-md-12 tag-web">
+                        <h5 class="cate-title">CDN</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-10" class="col-md-12 tag-web">
+                        <h5 class="cate-title">酷站推荐</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-11" class="col-md-12 tag-web">
+                        <h5 class="cate-title">前端团队</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                    <ul id="section-12" class="col-md-12 tag-web">
+                        <h5 class="cate-title">前端牛人</h5>
+                        <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                           <div class="web-content">
+                            <a href="http://www.webppd.com/index.html" target="_blank">
+                                <div class="web-logo-80">
+                                    <img class="img-responsive" src="images/3349lb1p1es7.png">
+                                </div>
+                                <span class="web-name name-bold">原型设计 mockplus</span>
+                                <p>这是一个不错的原型工具，可以高校的完成复杂的原型需求。</p>
+                            </a>
+                           </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

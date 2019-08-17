@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="111.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div id="unfold" class="glyphicon glyphicon-align-justify">
+        </div>
+        <div id="navNone" class="glyphicon glyphicon-remove">
+        </div>
+        <div class="left">
+
+<div class="panel-group" id="accordion">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                href="#collapseOne">
+                第 1 部分
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+            
+                        <ul id="myTab" class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#home" data-toggle="tab">热门</a></li>
+                            <li><a href="#1" data-toggle="tab">1</a></li>
+                            <li><a href="#2" data-toggle="tab">2</a></li>
+                            <li><a href="#3" data-toggle="tab">3</a></li>
+                        </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                href="#collapseTwo">
+                第 2 部分
+            </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul class="nav nav-pills nav-stacked">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">SVN</a></li>
+<li><a href="#">iOS</a></li>
+<li><a href="#">VB.Net</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">PHP</a></li>
+</ul>
+        </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <div class="right">
+            <div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="home">
+		home
+	</div>
+	<div class="tab-pane fade" id="1">
+		<iframe src="front-end.html" frameborder="0" scrolling="no" id="test" width="100%" onload="this.height=100"></iframe>
+	</div>
+	<div class="tab-pane fade" id="2">
+		<iframe src="index.html" frameborder="0" scrolling="no" id="test2" width="100%" onload="this.height=100"></iframe>
+	</div>
+	<div class="tab-pane fade" id="3">
+		3
+	</div>
+</div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+ 
+ 
+ <script language="javascript">
+     
+ $(function () {  
+     /**$('#unfold').click(function (event) {  
+         //取消事件冒泡  
+         event.stopPropagation();  
+         //按钮的toggle,如果div是可见的,点击按钮切换为隐藏的;如果是隐藏的,切换为可见的。  
+         $('.left').toggle('slow');  
+		 return false;
+     });  **/
+     
+        $("#unfold").click(function () {
+            $(".left").slideDown();
+            $("#unfold").slideUp();
+            $("#navNone").slideDown();
+            $(".right").css("width", '');
+        });
+    
+        $("#navNone").click(function () {
+            $(".left").slideUp();
+            $("#unfold").slideDown();
+            $("#navNone").slideUp();
+            $(".right").css({ "width": '100%'});
+        });
+ })
+ 
+//输入你希望根据页面高度自动调整高度的iframe的名称的列表
+//用逗号把每个iframe的ID分隔. 例如: ["myframe1", "myframe2"]，可以只有一个窗体，则不用逗号。
+//定义iframe的ID
+var iframeids=["test","test2"];
+//如果用户的浏览器不支持iframe是否将iframe隐藏 yes 表示隐藏，no表示不隐藏
+var iframehide="yes";
+function dyniframesize()
+{
+var dyniframe=new Array()
+for (i=0; i<iframeids.length; i++)
+{
+if (document.getElementById)
+{
+//自动调整iframe高度
+dyniframe[dyniframe.length] = document.getElementById(iframeids[i]);
+if (dyniframe[i] && !window.opera)
+{
+dyniframe[i].style.display="block";
+if (dyniframe[i].contentDocument && dyniframe[i].contentDocument.body.offsetHeight) //如果用户的浏览器是NetScape
+dyniframe[i].height = dyniframe[i].contentDocument.body.offsetHeight;
+else if (dyniframe[i].Document && dyniframe[i].Document.body.scrollHeight) //如果用户的浏览器是IE
+dyniframe[i].height = dyniframe[i].Document.body.scrollHeight;
+}
+}
+//根据设定的参数来处理不支持iframe的浏览器的显示问题
+if ((document.all || document.getElementById) && iframehide=="no")
+{
+var tempobj=document.all? document.all[iframeids[i]] : document.getElementById(iframeids[i]);
+tempobj.style.display="block";
+}
+}
+}
+if (window.addEventListener)
+window.addEventListener("load", dyniframesize, false);
+else if (window.attachEvent)
+window.attachEvent("onload", dyniframesize);
+else
+window.onload=dyniframesize;
+</script>
+  </body>
+</html>
+
+
+
+

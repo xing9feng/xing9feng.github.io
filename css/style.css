@@ -1,0 +1,291 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  background-color: #F9F9F9;
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #fff;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+  border-bottom: 1px solid #f1f3f4;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+.tag-web {
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+}
+.tag-web li {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+}
+.web-content {
+  padding: 4px 6px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+}
+.web-content-small {
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+}
+.web-content:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.web-content-small:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.tag-web li:hover span {
+  color: #337ab7;
+}
+.tag-web li a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.web-name {
+    line-height: 36px;
+    font-size: 14px;
+    color: #525558;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: ease 0.21s;
+    transition: ease 0.21s;
+    
+}
+.name-bold {
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    
+}
+.tag-web li p {
+    font-size: 14px;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: ease 0.21s;
+    transition: ease 0.21s;
+}
+.web-logo-80 {
+    float: left;
+    margin-right: 5px;
+}
+.web-logo-80 img {
+    width: 80px;
+    height: 80px;
+}
+.web-logo-60 {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 5px;
+}
+.web-logo-36 {
+    width: 36px;
+    height: 36px;
+    float: left;
+    margin-right: 5px;
+}
+
+.web-logo-36 img,.web-logo-60 img,.web-logo-80 img {
+  border-radius: 4px;
+}
+.cate-title {
+    padding-left: 15px;
+    margin-left: 8px;
+    margin-bottom: 20px;
+    height: 22px;
+    line-height: 22px;
+    color: rgb(14, 144, 210);
+    border-left: 3px solid rgb(16, 160, 234);
+}
+.w100 {
+    
+    float: left;
+    width: 100%;
+}
+
+
+.skin-layer {
+    display: none;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+}
+.skin-layer .skin-menu {
+    width: 100%;
+    height: 40px;
+    border-bottom: solid 1px #ccc;
+}
+.skin-layer .skin-menu .nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover{
+    background-color: #389cff;
+    border-radius: 0;
+}
+#skin-up {
+    float: left;
+    line-height: 40px;
+    color: #0079f5;
+}
+#skin-up a{
+    color: #0079f5;
+}
+#skin-clear {
+    float: left;
+    margin-right:20px;
+    line-height: 40px;
+    color: #94898c;
+}
+#skin-clear a{
+    color: #94898c;
+}
+.skin-layer .skin-photo-body {
+    width: 100%;
+    border-bottom: 1px #e3e3e3 solid;
+    padding: 15px 0 10px 0;
+}
+.skin-img {
+    float: left;
+    margin: 0 1px 1px 0;
+    cursor: pointer;
+}
+.skin-img img {
+    width: auto;
+    height: 100px;
+}
+
+#palette-white {
+    float:left;
+    width: 25px;
+    height: 25px;
+    background: #FFF;
+    border: solid 3px #7a7a7a;
+    margin-top: 6px;
+    cursor: pointer;
+    
+}
+
+#palette-black {
+    float:left;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border: solid 3px #7a7a7a;
+    margin: 6px 30px 0 5px;
+    cursor: pointer;
+    
+}
